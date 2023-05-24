@@ -177,7 +177,11 @@ var (
 		ForeignKeys: []*schema.ForeignKey{
 			{
 				Symbol:     "users_groups_group",
+<<<<<<< HEAD
 				Columns:    []*schema.Column{UsersColumns[27]},
+=======
+				Columns:    []*schema.Column{UsersColumns[26]},
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 				RefColumns: []*schema.Column{GroupsColumns[0]},
 				OnDelete:   schema.SetNull,
 			},

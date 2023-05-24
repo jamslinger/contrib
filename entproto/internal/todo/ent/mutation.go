@@ -4897,7 +4897,11 @@ func (m *UserMutation) Type() string {
 // order to get all numeric fields that were incremented/decremented, call
 // AddedFields().
 func (m *UserMutation) Fields() []string {
+<<<<<<< HEAD
 	fields := make([]string, 0, 26)
+=======
+	fields := make([]string, 0, 25)
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 	if m.user_name != nil {
 		fields = append(fields, user.FieldUserName)
 	}

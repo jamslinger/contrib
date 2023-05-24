@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b509527d-7b76-4a6a-8649-2b02ec746c45" name="Changes" comment="entproto: support json integers">
+      <change afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/schema/message_with_ints.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/adapter.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/adapter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/cmd/protoc-gen-entgrpc/converter.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/cmd/protoc-gen-entgrpc/converter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/cmd/protoc-gen-entgrpc/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/cmd/protoc-gen-entgrpc/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/adapter_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/adapter_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/ent.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/ent.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/hook/hook.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/hook/hook.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/migrate/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/migrate/schema.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/mutation.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/mutation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/predicate/predicate.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/predicate/predicate.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/entprototest/ent/tx.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/entprototest/ent/tx.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/migrate/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/migrate/schema.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/mutation.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/mutation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb/entpb.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb/entpb.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb/entpb.proto" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb/entpb.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb/entpb_user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb/entpb_user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/schema/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/schema/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/user/where.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/user/where.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/user_create.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/user_create.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entproto/internal/todo/ent/user_update.go" beforeDir="false" afterPath="$PROJECT_DIR$/entproto/internal/todo/ent/user_update.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="entproto: prevent conflicts when normalizing enum values" />
+        <option name="rewordedMessage" value="entproto: prevent conflicts when normalizing enum values" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="6951839451af5f6db9d167c52d76fae9a911fd0e" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
+  <component name="ProjectId" id="2OPikToWDww868VDBrMH3CUfrV1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/home/jonas/code/vendor/contrib/entproto/internal/entprototest/ent/schema",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "go.sdk"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/entproto/internal/entprototest/ent/schema" />
+      <recent name="$PROJECT_DIR$/entproto/internal/entprototest/ent" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.TestMessageWithInts in entgo.io/contrib/entproto/internal/entprototest">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestInvalidEnum in entgo.io/contrib/entproto/internal/entprototest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$/entproto/internal/entprototest" />
+      <parameters value=" -testify.m ^TestInvalidEnum$" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="entgo.io/contrib/entproto/internal/entprototest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSuite\E$/^\QTestInvalidEnum\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMessageWithInts in entgo.io/contrib/entproto/internal/entprototest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$/entproto/internal/entprototest" />
+      <parameters value=" -testify.m ^TestMessageWithInts$" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="entgo.io/contrib/entproto/internal/entprototest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSuite\E$/^\QTestMessageWithInts\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMessageWithInts in github.com/jamslinger/contrib/entproto/internal/entprototest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$/entproto/internal/entprototest" />
+      <parameters value=" -testify.m ^TestMessageWithInts$" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jamslinger/contrib/entproto/internal/entprototest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSuite\E$/^\QTestMessageWithInts\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test entgo.io/contrib/entproto/internal/entprototest" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$/entproto/internal/entprototest" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="entgo.io/contrib/entproto/internal/entprototest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test entgo.io/contrib/entproto/internal/todo/ent/proto/entpb" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="contrib" />
+      <working_directory value="$PROJECT_DIR$/entproto/internal/todo/ent/proto/entpb" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="entgo.io/contrib/entproto/internal/todo/ent/proto/entpb" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestMessageWithInts in entgo.io/contrib/entproto/internal/entprototest" />
+        <item itemvalue="Go Test.TestMessageWithInts in github.com/jamslinger/contrib/entproto/internal/entprototest" />
+        <item itemvalue="Go Test.go test entgo.io/contrib/entproto/internal/entprototest" />
+        <item itemvalue="Go Test.TestInvalidEnum in entgo.io/contrib/entproto/internal/entprototest" />
+        <item itemvalue="Go Test.go test entgo.io/contrib/entproto/internal/todo/ent/proto/entpb" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b509527d-7b76-4a6a-8649-2b02ec746c45" name="Changes" comment="" />
+      <created>1681468760749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681468760749</updated>
+    </task>
+    <task id="LOCAL-00003" summary="entproto: support field type []int">
+      <created>1681472743190</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681472743190</updated>
+    </task>
+    <task id="LOCAL-00004" summary="entproto: support field type []int">
+      <created>1681474875652</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681474875652</updated>
+    </task>
+    <task id="LOCAL-00005" summary="entproto: support field type []int">
+      <created>1681479323687</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681479323687</updated>
+    </task>
+    <task id="LOCAL-00006" summary="entproto: support field type []int">
+      <created>1681479617612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681479617612</updated>
+    </task>
+    <task id="LOCAL-00007" summary="entproto: support field type []int">
+      <created>1681479951872</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681479951872</updated>
+    </task>
+    <task id="LOCAL-00008" summary="entproto: support field type []int">
+      <created>1681482376809</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681482376809</updated>
+    </task>
+    <task id="LOCAL-00009" summary="protoc-gen-entgrpc: support field type []int">
+      <created>1681482729655</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681482729655</updated>
+    </task>
+    <task id="LOCAL-00010" summary="protoc-gen-entgrpc: support field type []int">
+      <created>1681483179541</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681483179541</updated>
+    </task>
+    <task id="LOCAL-00011" summary="entproto: support all slices">
+      <created>1681483814745</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681483814745</updated>
+    </task>
+    <task id="LOCAL-00012" summary="entproto: support all slices">
+      <created>1681484312058</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681484312058</updated>
+    </task>
+    <task id="LOCAL-00013" summary="entproto: support uint32 slices">
+      <created>1681713962876</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713962876</updated>
+    </task>
+    <task id="LOCAL-00014" summary="entproto: allow special enum values">
+      <created>1681732174669</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681732174669</updated>
+    </task>
+    <task id="LOCAL-00015" summary="entproto: allow special enum values">
+      <created>1681739612969</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681739612969</updated>
+    </task>
+    <task id="LOCAL-00016" summary="entproto: allow special enum values">
+      <created>1681739958009</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681739958009</updated>
+    </task>
+    <task id="LOCAL-00017" summary="entproto: allow special enum values">
+      <created>1681740331427</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681740331427</updated>
+    </task>
+    <task id="LOCAL-00018" summary="entproto: allow special enum values">
+      <created>1681741200653</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741200653</updated>
+    </task>
+    <task id="LOCAL-00019" summary="entproto: allow special enum values">
+      <created>1681741678335</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741678335</updated>
+    </task>
+    <task id="LOCAL-00020" summary="entproto: allow special enum values">
+      <created>1681742025044</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681742025044</updated>
+    </task>
+    <task id="LOCAL-00021" summary="entproto: allow special enum values">
+      <created>1681798372308</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681798372308</updated>
+    </task>
+    <task id="LOCAL-00022" summary="entproto: allow special enum values">
+      <created>1681798789044</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681798789044</updated>
+    </task>
+    <task id="LOCAL-00023" summary="entproto: allow special enum values">
+      <created>1681798940392</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681798940392</updated>
+    </task>
+    <task id="LOCAL-00024" summary="entproto: allow special enum values">
+      <created>1681801927372</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681801927372</updated>
+    </task>
+    <task id="LOCAL-00025" summary="entproto: allow special enum values">
+      <created>1681802243914</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681802243914</updated>
+    </task>
+    <task id="LOCAL-00026" summary="entproto: allow special enum values">
+      <created>1681812791475</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681812791475</updated>
+    </task>
+    <task id="LOCAL-00027" summary="entproto: allow special enum values">
+      <created>1681823054636</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681823054636</updated>
+    </task>
+    <task id="LOCAL-00028" summary="entproto: allow special enum values">
+      <created>1681825932773</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681825932773</updated>
+    </task>
+    <task id="LOCAL-00029" summary="entproto: allow special enum values">
+      <created>1681826110575</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681826110575</updated>
+    </task>
+    <task id="LOCAL-00030" summary="entproto: allow all int types">
+      <created>1681888502911</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681888502911</updated>
+    </task>
+    <task id="LOCAL-00031" summary="entproto: allow all int types">
+      <created>1681888628760</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681888628760</updated>
+    </task>
+    <task id="LOCAL-00032" summary="entproto: allow all int types">
+      <created>1681889987833</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681889987833</updated>
+    </task>
+    <task id="LOCAL-00033" summary="entproto: support json with all integer types">
+      <created>1681890260540</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681890260540</updated>
+    </task>
+    <task id="LOCAL-00034" summary="entproto: support json with all integer types">
+      <created>1681892450011</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681892450011</updated>
+    </task>
+    <task id="LOCAL-00035" summary="entproto: support enum named values with special characters">
+      <created>1681916791356</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681916791356</updated>
+    </task>
+    <task id="LOCAL-00036" summary="entproto: support enum named values with special characters">
+      <created>1681976619858</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1681976619858</updated>
+    </task>
+    <task id="LOCAL-00037" summary="entproto: support enum named values with special characters">
+      <created>1681977003653</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1681977003653</updated>
+    </task>
+    <task id="LOCAL-00038" summary="entproto: support enum named values with special characters">
+      <created>1681977255516</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681977255516</updated>
+    </task>
+    <task id="LOCAL-00039" summary="entproto: support enum named values with special characters">
+      <created>1681979329095</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1681979329095</updated>
+    </task>
+    <task id="LOCAL-00040" summary="entproto: support enum named values with special characters">
+      <created>1681979623137</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1681979623137</updated>
+    </task>
+    <task id="LOCAL-00041" summary="entproto: support enum named values with special characters">
+      <created>1681979870691</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1681979870691</updated>
+    </task>
+    <task id="LOCAL-00042" summary="entproto: support enum named values with special characters">
+      <created>1681986087295</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1681986087295</updated>
+    </task>
+    <task id="LOCAL-00043" summary="entproto: support enum named values with special characters">
+      <created>1681986545967</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1681986545967</updated>
+    </task>
+    <task id="LOCAL-00044" summary="entproto: support enum named values with special characters">
+      <created>1681994662340</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1681994662340</updated>
+    </task>
+    <task id="LOCAL-00045" summary="entproto: support enum named values with special characters">
+      <created>1681994948403</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1681994948403</updated>
+    </task>
+    <task id="LOCAL-00046" summary="entproto: support enum named values with special characters">
+      <created>1681996601317</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1681996601317</updated>
+    </task>
+    <task id="LOCAL-00047" summary="entproto: support enum named values with special characters">
+      <created>1682069752334</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1682069752334</updated>
+    </task>
+    <task id="LOCAL-00048" summary="entproto: support enum named values with special characters">
+      <created>1682069861640</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1682069861640</updated>
+    </task>
+    <task id="LOCAL-00049" summary="entproto: support enum named values with special characters">
+      <created>1682072592031</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1682072592031</updated>
+    </task>
+    <task id="LOCAL-00050" summary="entproto: support json integers">
+      <created>1683527480641</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1683527480642</updated>
+    </task>
+    <task id="LOCAL-00051" summary="entproto: support json integers">
+      <created>1683533994769</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1683533994769</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value="strings" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="entproto: support field type []int" />
+    <MESSAGE value="protoc-gen-entgrpc: support field type []int" />
+    <MESSAGE value="entproto: support all slices" />
+    <MESSAGE value="entproto: support uint32 slices" />
+    <MESSAGE value="entproto: allow special enum values" />
+    <MESSAGE value="entproto: allow all int types" />
+    <MESSAGE value="entproto: support json with all integer types" />
+    <MESSAGE value="entproto: support enum values with special characters" />
+    <MESSAGE value="entproto: prevent conflicts when normalizing enum values" />
+    <MESSAGE value="entproto: support enum named values with special characters" />
+    <MESSAGE value="entproto: support json integers" />
+    <option name="LAST_COMMIT_MESSAGE" value="entproto: support json integers" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/entproto/adapter.go</url>
+          <line>518</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

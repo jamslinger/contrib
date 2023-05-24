@@ -211,6 +211,7 @@ func (c *Client) Tx(ctx context.Context) (*Tx, error) {
 	cfg := c.config
 	cfg.driver = tx
 	return &Tx{
+<<<<<<< HEAD
 		ctx:                      ctx,
 		config:                   cfg,
 		AllMethodsService:        NewAllMethodsServiceClient(cfg),
@@ -237,6 +238,33 @@ func (c *Client) Tx(ctx context.Context) (*Tx, error) {
 		TwoMethodService:         NewTwoMethodServiceClient(cfg),
 		User:                     NewUserClient(cfg),
 		ValidMessage:             NewValidMessageClient(cfg),
+=======
+		ctx:                    ctx,
+		config:                 cfg,
+		AllMethodsService:      NewAllMethodsServiceClient(cfg),
+		BlogPost:               NewBlogPostClient(cfg),
+		Category:               NewCategoryClient(cfg),
+		DependsOnSkipped:       NewDependsOnSkippedClient(cfg),
+		DuplicateNumberMessage: NewDuplicateNumberMessageClient(cfg),
+		ExplicitSkippedMessage: NewExplicitSkippedMessageClient(cfg),
+		Image:                  NewImageClient(cfg),
+		ImplicitSkippedMessage: NewImplicitSkippedMessageClient(cfg),
+		InvalidFieldMessage:    NewInvalidFieldMessageClient(cfg),
+		MessageWithEnum:        NewMessageWithEnumClient(cfg),
+		MessageWithFieldOne:    NewMessageWithFieldOneClient(cfg),
+		MessageWithID:          NewMessageWithIDClient(cfg),
+		MessageWithInts:        NewMessageWithIntsClient(cfg),
+		MessageWithOptionals:   NewMessageWithOptionalsClient(cfg),
+		MessageWithPackageName: NewMessageWithPackageNameClient(cfg),
+		MessageWithStrings:     NewMessageWithStringsClient(cfg),
+		NoBackref:              NewNoBackrefClient(cfg),
+		OneMethodService:       NewOneMethodServiceClient(cfg),
+		Portal:                 NewPortalClient(cfg),
+		SkipEdgeExample:        NewSkipEdgeExampleClient(cfg),
+		TwoMethodService:       NewTwoMethodServiceClient(cfg),
+		User:                   NewUserClient(cfg),
+		ValidMessage:           NewValidMessageClient(cfg),
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 	}, nil
 }
 
@@ -254,6 +282,7 @@ func (c *Client) BeginTx(ctx context.Context, opts *sql.TxOptions) (*Tx, error) 
 	cfg := c.config
 	cfg.driver = &txDriver{tx: tx, drv: c.driver}
 	return &Tx{
+<<<<<<< HEAD
 		ctx:                      ctx,
 		config:                   cfg,
 		AllMethodsService:        NewAllMethodsServiceClient(cfg),
@@ -280,6 +309,33 @@ func (c *Client) BeginTx(ctx context.Context, opts *sql.TxOptions) (*Tx, error) 
 		TwoMethodService:         NewTwoMethodServiceClient(cfg),
 		User:                     NewUserClient(cfg),
 		ValidMessage:             NewValidMessageClient(cfg),
+=======
+		ctx:                    ctx,
+		config:                 cfg,
+		AllMethodsService:      NewAllMethodsServiceClient(cfg),
+		BlogPost:               NewBlogPostClient(cfg),
+		Category:               NewCategoryClient(cfg),
+		DependsOnSkipped:       NewDependsOnSkippedClient(cfg),
+		DuplicateNumberMessage: NewDuplicateNumberMessageClient(cfg),
+		ExplicitSkippedMessage: NewExplicitSkippedMessageClient(cfg),
+		Image:                  NewImageClient(cfg),
+		ImplicitSkippedMessage: NewImplicitSkippedMessageClient(cfg),
+		InvalidFieldMessage:    NewInvalidFieldMessageClient(cfg),
+		MessageWithEnum:        NewMessageWithEnumClient(cfg),
+		MessageWithFieldOne:    NewMessageWithFieldOneClient(cfg),
+		MessageWithID:          NewMessageWithIDClient(cfg),
+		MessageWithInts:        NewMessageWithIntsClient(cfg),
+		MessageWithOptionals:   NewMessageWithOptionalsClient(cfg),
+		MessageWithPackageName: NewMessageWithPackageNameClient(cfg),
+		MessageWithStrings:     NewMessageWithStringsClient(cfg),
+		NoBackref:              NewNoBackrefClient(cfg),
+		OneMethodService:       NewOneMethodServiceClient(cfg),
+		Portal:                 NewPortalClient(cfg),
+		SkipEdgeExample:        NewSkipEdgeExampleClient(cfg),
+		TwoMethodService:       NewTwoMethodServiceClient(cfg),
+		User:                   NewUserClient(cfg),
+		ValidMessage:           NewValidMessageClient(cfg),
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 	}, nil
 }
 
@@ -310,8 +366,13 @@ func (c *Client) Close() error {
 func (c *Client) Use(hooks ...Hook) {
 	for _, n := range []interface{ Use(...Hook) }{
 		c.AllMethodsService, c.BlogPost, c.Category, c.DependsOnSkipped,
+<<<<<<< HEAD
 		c.DuplicateNumberMessage, c.EnumWithConflictingValue, c.ExplicitSkippedMessage,
 		c.Image, c.ImplicitSkippedMessage, c.InvalidFieldMessage, c.MessageWithEnum,
+=======
+		c.DuplicateNumberMessage, c.ExplicitSkippedMessage, c.Image,
+		c.ImplicitSkippedMessage, c.InvalidFieldMessage, c.MessageWithEnum,
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 		c.MessageWithFieldOne, c.MessageWithID, c.MessageWithInts,
 		c.MessageWithOptionals, c.MessageWithPackageName, c.MessageWithStrings,
 		c.NoBackref, c.OneMethodService, c.Portal, c.SkipEdgeExample,
@@ -326,8 +387,13 @@ func (c *Client) Use(hooks ...Hook) {
 func (c *Client) Intercept(interceptors ...Interceptor) {
 	for _, n := range []interface{ Intercept(...Interceptor) }{
 		c.AllMethodsService, c.BlogPost, c.Category, c.DependsOnSkipped,
+<<<<<<< HEAD
 		c.DuplicateNumberMessage, c.EnumWithConflictingValue, c.ExplicitSkippedMessage,
 		c.Image, c.ImplicitSkippedMessage, c.InvalidFieldMessage, c.MessageWithEnum,
+=======
+		c.DuplicateNumberMessage, c.ExplicitSkippedMessage, c.Image,
+		c.ImplicitSkippedMessage, c.InvalidFieldMessage, c.MessageWithEnum,
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 		c.MessageWithFieldOne, c.MessageWithID, c.MessageWithInts,
 		c.MessageWithOptionals, c.MessageWithPackageName, c.MessageWithStrings,
 		c.NoBackref, c.OneMethodService, c.Portal, c.SkipEdgeExample,
@@ -3405,6 +3471,7 @@ func (c *ValidMessageClient) mutate(ctx context.Context, m *ValidMessageMutation
 type (
 	hooks struct {
 		AllMethodsService, BlogPost, Category, DependsOnSkipped, DuplicateNumberMessage,
+<<<<<<< HEAD
 		EnumWithConflictingValue, ExplicitSkippedMessage, Image,
 		ImplicitSkippedMessage, InvalidFieldMessage, MessageWithEnum,
 		MessageWithFieldOne, MessageWithID, MessageWithInts, MessageWithOptionals,
@@ -3418,5 +3485,20 @@ type (
 		MessageWithFieldOne, MessageWithID, MessageWithInts, MessageWithOptionals,
 		MessageWithPackageName, MessageWithStrings, NoBackref, OneMethodService,
 		Portal, SkipEdgeExample, TwoMethodService, User, ValidMessage []ent.Interceptor
+=======
+		ExplicitSkippedMessage, Image, ImplicitSkippedMessage, InvalidFieldMessage,
+		MessageWithEnum, MessageWithFieldOne, MessageWithID, MessageWithInts,
+		MessageWithOptionals, MessageWithPackageName, MessageWithStrings, NoBackref,
+		OneMethodService, Portal, SkipEdgeExample, TwoMethodService, User,
+		ValidMessage []ent.Hook
+	}
+	inters struct {
+		AllMethodsService, BlogPost, Category, DependsOnSkipped, DuplicateNumberMessage,
+		ExplicitSkippedMessage, Image, ImplicitSkippedMessage, InvalidFieldMessage,
+		MessageWithEnum, MessageWithFieldOne, MessageWithID, MessageWithInts,
+		MessageWithOptionals, MessageWithPackageName, MessageWithStrings, NoBackref,
+		OneMethodService, Portal, SkipEdgeExample, TwoMethodService, User,
+		ValidMessage []ent.Interceptor
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 	}
 )

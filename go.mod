@@ -1,4 +1,4 @@
-module entgo.io/contrib
+module github.com/jamslinger/contrib
 
 go 1.18
 

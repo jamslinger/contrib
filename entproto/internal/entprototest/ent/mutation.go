@@ -43,6 +43,7 @@ const (
 	OpUpdateOne = ent.OpUpdateOne
 
 	// Node types.
+<<<<<<< HEAD
 	TypeAllMethodsService        = "AllMethodsService"
 	TypeBlogPost                 = "BlogPost"
 	TypeCategory                 = "Category"
@@ -67,6 +68,31 @@ const (
 	TypeTwoMethodService         = "TwoMethodService"
 	TypeUser                     = "User"
 	TypeValidMessage             = "ValidMessage"
+=======
+	TypeAllMethodsService      = "AllMethodsService"
+	TypeBlogPost               = "BlogPost"
+	TypeCategory               = "Category"
+	TypeDependsOnSkipped       = "DependsOnSkipped"
+	TypeDuplicateNumberMessage = "DuplicateNumberMessage"
+	TypeExplicitSkippedMessage = "ExplicitSkippedMessage"
+	TypeImage                  = "Image"
+	TypeImplicitSkippedMessage = "ImplicitSkippedMessage"
+	TypeInvalidFieldMessage    = "InvalidFieldMessage"
+	TypeMessageWithEnum        = "MessageWithEnum"
+	TypeMessageWithFieldOne    = "MessageWithFieldOne"
+	TypeMessageWithID          = "MessageWithID"
+	TypeMessageWithInts        = "MessageWithInts"
+	TypeMessageWithOptionals   = "MessageWithOptionals"
+	TypeMessageWithPackageName = "MessageWithPackageName"
+	TypeMessageWithStrings     = "MessageWithStrings"
+	TypeNoBackref              = "NoBackref"
+	TypeOneMethodService       = "OneMethodService"
+	TypePortal                 = "Portal"
+	TypeSkipEdgeExample        = "SkipEdgeExample"
+	TypeTwoMethodService       = "TwoMethodService"
+	TypeUser                   = "User"
+	TypeValidMessage           = "ValidMessage"
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 )
 
 // AllMethodsServiceMutation represents an operation that mutates the AllMethodsService nodes in the graph.

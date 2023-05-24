@@ -96,6 +96,7 @@ var (
 func checkColumn(table, column string) error {
 	initCheck.Do(func() {
 		columnCheck = sql.NewColumnCheck(map[string]func(string) bool{
+<<<<<<< HEAD
 			allmethodsservice.Table:        allmethodsservice.ValidColumn,
 			blogpost.Table:                 blogpost.ValidColumn,
 			category.Table:                 category.ValidColumn,
@@ -120,6 +121,31 @@ func checkColumn(table, column string) error {
 			twomethodservice.Table:         twomethodservice.ValidColumn,
 			user.Table:                     user.ValidColumn,
 			validmessage.Table:             validmessage.ValidColumn,
+=======
+			allmethodsservice.Table:      allmethodsservice.ValidColumn,
+			blogpost.Table:               blogpost.ValidColumn,
+			category.Table:               category.ValidColumn,
+			dependsonskipped.Table:       dependsonskipped.ValidColumn,
+			duplicatenumbermessage.Table: duplicatenumbermessage.ValidColumn,
+			explicitskippedmessage.Table: explicitskippedmessage.ValidColumn,
+			image.Table:                  image.ValidColumn,
+			implicitskippedmessage.Table: implicitskippedmessage.ValidColumn,
+			invalidfieldmessage.Table:    invalidfieldmessage.ValidColumn,
+			messagewithenum.Table:        messagewithenum.ValidColumn,
+			messagewithfieldone.Table:    messagewithfieldone.ValidColumn,
+			messagewithid.Table:          messagewithid.ValidColumn,
+			messagewithints.Table:        messagewithints.ValidColumn,
+			messagewithoptionals.Table:   messagewithoptionals.ValidColumn,
+			messagewithpackagename.Table: messagewithpackagename.ValidColumn,
+			messagewithstrings.Table:     messagewithstrings.ValidColumn,
+			nobackref.Table:              nobackref.ValidColumn,
+			onemethodservice.Table:       onemethodservice.ValidColumn,
+			portal.Table:                 portal.ValidColumn,
+			skipedgeexample.Table:        skipedgeexample.ValidColumn,
+			twomethodservice.Table:       twomethodservice.ValidColumn,
+			user.Table:                   user.ValidColumn,
+			validmessage.Table:           validmessage.ValidColumn,
+>>>>>>> 3d6ea95 (entproto: support json for integer type slices)
 		})
 	})
 	return columnCheck(table, column)
